@@ -1,0 +1,133 @@
+.field{
+	position: absolute;
+	background: green;
+	width: 860px;
+	height: 800px;
+}
+
+.card{
+	position: absolute;
+	width: 110px;
+	height:170px;
+	display: inline-block;
+	border: 1px solid white;
+	border-radius: 5px;
+	left:10px;
+	top:10px;
+	-webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+}
+
+.left_top_card_name{
+	position: absolute;
+	width: 20px;
+	height:20px;
+	display: inline-block;
+	color: yellow;
+	left:10px;
+	top:10px;
+}
+
+.right_bottom_card_name{
+	position: absolute;
+	width: 20px;
+	height:20px;
+	display: inline-block;
+	color: yellow;
+	right:10px;
+	bottom:10px;
+}
+
+.center_card_name{
+	position: absolute;
+	width: 40px;
+	height:40px;
+	display: inline-block;
+	color: yellow;
+	left:35px;
+	top:55px;
+	font-size:40px;
+	text-align: center;
+}
+
+.card_place div{
+	position: absolute;
+	width: 110px;
+	height:170px;
+	display: inline-block;
+	border: 1px solid black;
+	border-radius: 5px;
+}
+.close_card{
+	background: yellow !important;
+}
+
+/*.close_card:before{
+    content:"";
+    display:block;
+    height: 100%;
+    width:100%;
+    background: yellow;
+}*/
+
+.deck_close{
+	left:10px;
+	top:10px;
+}
+
+.deck_close_suit{
+	z-index: 100;
+	background: yellow;
+}
+.deck_open{
+	left:130px;
+	top:10px;
+}
+.suit_1{
+	left: 370px;
+	top:10px;
+}
+.suit_2{
+	left:490px;
+	top:10px;
+}
+.suit_3{
+	left:610px;
+	top:10px;
+}
+.suit_4{
+	left:730px;
+	top:10px;
+}
+.col_1{
+	left:10px;
+	top:240px;
+}
+.col_2{
+	left:130px;
+	top:240px;
+}
+.col_3{
+	left:250px;
+	top:240px;
+}
+.col_4{
+	left:370px;
+	top:240px;
+}
+.col_5{
+	left:490px;
+	top:240px;
+}
+.col_6{
+	left:610px;
+	top:240px;
+}
+.col_7{
+	left:730px;
+	top:240px;
+}
+.top_card{
+	z-index: 50 !important;
+}
