@@ -1,22 +1,36 @@
 .field {
 	position: absolute;
-	background: green;
+	background: #387D38;
 	width: 860px;
 	height: 800px;
 }
 
-.card {
+.card_place > * {
 	position: absolute;
+	display: inline-block;
+
 	width: 110px;
 	height: 170px;
-	display: inline-block;
-	border: 1px solid white;
+	
 	border-radius: 5px;
+
+	border: 1px solid rgba(255, 255, 255, 0.2);
+	box-shadow: inset 2px 2px 4px 0px rgba(0, 0, 0, 0.45);
+}
+
+.card {
+	position: absolute;
+	display: inline-block;
 	left: 10px;
 	top: 10px;
+	width: 110px;
+	height: 170px;
+	border: 1px solid black;
+	border-radius: 5px;
 	-webkit-user-select: none;
 	-moz-user-select: none;
 	-ms-user-select: none;
+	background-color: white;
 }
 
 	.card > * {
@@ -25,7 +39,7 @@
 
 
 	.card.red {
-		background-color: pink;
+		--background-color: pink;
 	}
 
 		.card.red > * {
@@ -33,14 +47,19 @@
 		}
 
 	.card.black {
-		background-color: lightgray;
+		--background-color: lightgray;
 	}
+
 		.card.black > * {
 			color: black;
 		}
 
 	.card.close_card {
-		background-color: dimgray;
+		border: 1px solid black;
+		box-shadow: inset 0px 0px 0px 1px #DCDCDC, inset 0px 0px 0px 4px white;
+		background-color: #0D32E1;
+		background-image: url(card_suit_pattern_white.png);
+		background-repeat: repeat;
 	}
 
 		.card.close_card > * {
@@ -80,15 +99,6 @@
 	text-align: center;
 }
 
-.card_place div {
-	position: absolute;
-	width: 110px;
-	height: 170px;
-	display: inline-block;
-	border: 1px solid black;
-	border-radius: 5px;
-}
-
 
 
 /*.close_card:before{
@@ -106,7 +116,15 @@
 
 .deck_close_suit {
 	z-index: 100;
-	background-color: dimgray;
+
+	border: 1px solid black;
+	box-shadow: inset 0px 0px 0px 1px #DCDCDC, inset 0px 0px 0px 4px white;
+	--background-color:#506EF5;
+	--background-color:#960000;
+	--background-color:#007800;
+	background-color: #0D32E1;
+	background-image: url(card_suit_pattern_white.png);
+	background-repeat: repeat;
 }
 
 .deck_open {
