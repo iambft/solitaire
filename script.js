@@ -84,9 +84,9 @@ function createCard(card){
 	var rightBottomCardName = document.createElement('div');
 	var centerCardName = document.createElement('div');
 	if(suit === "h" || suit === "d"){
-		cardDiv.style.background = "red";
+		cardDiv.classList.add("red");
 	}else{
-		cardDiv.style.background = "black";
+		cardDiv.classList.add("black");
 	}
 	card.close = true;
 	cardDiv.classList.add("card");
@@ -158,7 +158,7 @@ function moveCard(card){
   				pushCardInCol(eventUp, eventDown);
     			document.onmousemove = null; 
     			eventDown.target.classList.remove("top_card"); 
-    			document.onmouseup = null;         
+    			document.onmouseup = null;
 			}
   		}
 	});
