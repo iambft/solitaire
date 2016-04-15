@@ -77,7 +77,7 @@ function createCard(card){
 	var cardName = card.name;
 	var suit = cardName.slice(1);
 	var	weight = cardName.slice(0,1);
-	var suitGraph = choiseCardPictures(suit);
+	var suitGraph = choiceCardPictures(suit);
 	var field = document.querySelector('.field');
 	var cardDiv = document.createElement('div');
 	var leftTopCardName = document.createElement('div');
@@ -106,20 +106,20 @@ function createCard(card){
 	return cardDiv;
 }
 
-function choiseCardPictures(suit){
+function choiceCardPictures(suit){
 	var suitGraph;
 	switch (suit) {
    		case "h":
-   			suitGraph = "♥";
+   			suitGraph = "&hearts;";
       		break;
    		case "d":
-   			suitGraph = "♦";
+   			suitGraph = "&diams;";
       		break;
    		case "c":
-   			suitGraph = "♣";
+   			suitGraph = "&clubs;";
       		break;
       	case "s":
-      		suitGraph = "♠";
+      		suitGraph = "&spades;";
       		break;
    		default:
    		console.log("switch suit error");
@@ -156,7 +156,7 @@ function moveCard(card){
     		}
   			document.onmouseup = function(eventUp){
   				pushCardInCol(eventUp, eventDown);
-    			document.onmousemove = null; 
+    			document.onmousemove = null;
     			eventDown.target.classList.remove("top_card"); 
     			document.onmouseup = null;
 			}
@@ -166,9 +166,9 @@ function moveCard(card){
 
 function cardPositioner(eventDown,eventMove){
 	var elemsMove = searchElemInCol(eventDown,{column1,column2,column3,column4,column5,column6,column7});
-	var takeCardPlace = 30;
-    var positionX = eventMove.clientX,
-    	positionY = eventMove.clientY;
+	var takeCardPlace = 10;//30;
+    var positionX = eventMove.clientX - eventDown.offsetX,
+    	positionY = eventMove.clientY - eventDown.offsetY;
   		elemsMove.forEach(function(item){
   			item.div.style.left = positionX - takeCardPlace + "px";
     		item.div.style.top = positionY - takeCardPlace  + "px";
@@ -238,7 +238,7 @@ function moveCardToColumn(upColumn,downColumn,clickCardNum,upCardVal,downCardVal
 	var dCL = downColumn.length,
 		cCN = clickCardNum;
 	var	king = 13;	
-	if(+upCardVal - 1 === +downCardVal && compareSuit(downCardSuit,upCardSuit)){		
+	if(+upCardVal - 1 === +downCardVal && compareSuit(downCardSuit,upCardSuit)){
 		for(var j = cCN; j < dCL; j++){
 			upColumn.push(downColumn.splice(cCN,1)[0]);
 		}
