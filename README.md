@@ -1,1 +1,1 @@
-#  http://iambft.github.io/solitaire/
+# http://iambft.github.io/Solitaire/
